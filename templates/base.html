@@ -177,6 +177,12 @@
         </form>
       {% endif %}
 
+      {% if DISPLAY_SEARCH_FORM -%}
+          <form id="search" action"#" onsubmit="javascript:window.open('https://duckduckgo.com/?q='+document.getElementById('keywords').value+'+site:https:{{ SITEURL }}');">
+              <input id="keywords" type="text" placeholder="Search" />
+          </form>
+      {% endif %}
+
       {% if (pages and DISPLAY_PAGES_ON_MENU) or LINKS %}
       <nav>
         <ul class="list">
