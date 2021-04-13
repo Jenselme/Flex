@@ -288,6 +288,7 @@
   {% if (PIWIK_URL and PIWIK_SITE_ID) or (MATOMO_URL and MATOMO_SITE_ID) %}
     {% include "partial/matomo.html" %}
   {% endif %}
+  {% include "partial/custom_matomo.html" %}
 
   {% include "partial/jsonld.html" %}
 
