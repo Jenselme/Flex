@@ -29,6 +29,9 @@
       {{ _('Posted on %(when)s in %(category)s',
            when=article.locale_date,
            category='<a href="%s/%s">%s</a>'|format(SITEURL, article.category.url, article.category)|safe) }}
+      {% if article.modified %}
+        Last modified on: {{ article.modified | strftime(DEFAULT_DATE_FORMAT) }}
+      {% endif %}
 
       {% if PLUGINS and 'post_stats' in PLUGINS %}
         &#8226; {{ _('%(minutes)s min read', minutes=article.stats['read_mins']) }}
