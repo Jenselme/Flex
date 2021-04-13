@@ -89,6 +89,14 @@
     <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS">
   {% endif %}
 
+  {% if CATEGORY_FEED_ATOM and category %}
+    <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM | replace('{slug}', category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} / {{ category }} Atom">
+  {% endif %}
+
+  {% if CATEGORY_FEED_RSS and category %}
+    <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS | replace('{slug}', category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} / {{ category }} RSS">
+  {% endif %}
+
   {% if FAVICON %}
     <link rel="shortcut icon" href="{{ FAVICON }}" type="image/x-icon">
     <link rel="icon" href="{{ FAVICON }}" type="image/x-icon">
