@@ -276,6 +276,14 @@
       {% if FEED_ALL_RSS %}
       <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">{{ _('RSS') }}</a>
       {% endif %}
+
+      {% if CATEGORY_FEED_ATOM and category %}
+        <a href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM | replace('{slug}', category.slug) }}">Atom for {{ category }}</a>
+      {% endif %}
+
+      {% if CATEGORY_FEED_RSS and category %}
+        <a href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS | replace('{slug}', category.slug) }}">RSS for {{ category }}</a>
+      {% endif %}
     </nav>
     {% endif %}
 
