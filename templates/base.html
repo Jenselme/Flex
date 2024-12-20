@@ -151,6 +151,8 @@
 
   {% include "partial/gtm.html" %}
   {% include "partial/clarity.html" %}
+
+  <script defer data-domain="jujens.eu" src="https://plausible.io/js/script.js"></script>
 </head>
 <body {% if not THEME_COLOR_AUTO_DETECT_BROWSER_PREFERENCE %}class="{{ THEME_COLOR|default('light') }}-theme"{% endif %}>
   {% include "partial/gtm_noscript.html" %}
