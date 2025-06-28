@@ -8,9 +8,9 @@
   <span class="footer-separator">|</span>
   {{
     _('Switch to the %(dark_url)s | %(light_url)s | %(browser_url)s theme',
-      dark_url='<a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a>',
-      light_url='<a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a>',
-      browser_url='<a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a>'|safe)
+      dark_url='<a href="javascript:void(0)" onclick="theme.switch(`dark`)" role="button">dark</a>',
+      light_url='<a href="javascript:void(0)" onclick="theme.switch(`light`)" role="button">light</a>',
+      browser_url='<a href="javascript:void(0)" onclick="theme.switch(`browser`)" role="button">browser</a>'|safe)
   }}
   <script id="dark-theme-script"
           src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/dark-theme/dark-theme.min.js"
